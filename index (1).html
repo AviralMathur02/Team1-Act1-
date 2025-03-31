@@ -107,7 +107,7 @@
         canvas {
             width: 100% !important;
             height: 100% !important;
-            border: 2px solid #000; /* Border added for definition */
+            border: 2px solid #000; 
             border-radius: 10px;
         }
 
@@ -172,17 +172,11 @@
 .footer-text li {
     margin: 5px 0;
 }
-
-
-
     </style>
 </head>
 <body>
 
-
-
   <img src="images/tech-titans.png" alt="Tech Titans Logo" class="logo">
-
 
   <div class="content">
     <div class="info-box">
@@ -299,7 +293,7 @@
         let totalPayment = emi * term;
         let totalInterest = totalPayment - loanAmount;
 
-        // 🏦 Determine Loan Category
+        //  Determine Loan Category
         let loanCategory = "";
         if (loanAmount >= 5000 && loanAmount <= 50000) loanCategory = "Small Loan";
         else if (loanAmount > 50000 && loanAmount <= 500000) loanCategory = "Personal Loan";
@@ -307,7 +301,7 @@
         else if (loanAmount > 1000000 && loanAmount <= 5000000) loanCategory = "Home Loan";
         else loanCategory = "Large Loan";
 
-        // 📉 Determine EMI-Based Category
+        //  Determine EMI-Based Category
         let emiCategory = "";
         if (emi < 5000) emiCategory = "Low EMI Loan";
         else if (emi >= 5000 && emi <= 15000) emiCategory = "Moderate EMI Loan";
@@ -316,10 +310,10 @@
         document.getElementById("emiAmount").value = `₹${parseFloat(emi).toLocaleString('en-IN')}`;
         document.getElementById("totalPaymentBox").innerText = `Total Payment: ₹${totalPayment.toLocaleString('en-IN')}`;
         document.getElementById("interestPaidBox").innerText = `Total Interest: ₹${totalInterest.toLocaleString('en-IN')}`;
-        document.getElementById("loanCategoryBox").innerText = `🏦 Loan Category: ${loanCategory} (${emiCategory})`;
+        document.getElementById("loanCategoryBox").innerText = ` Loan Category: ${loanCategory} (${emiCategory})`;
         
         document.getElementById("chartContainer").style.display = "block";
-        document.getElementById("emiInfo").style.display = "block"; // ✅ Show EMI info after calculation
+        document.getElementById("emiInfo").style.display = "block"; //  Show EMI info after calculation
         document.getElementById("footer").style.display = "block";
 
         let ctx = document.getElementById("emiChart").getContext("2d");
@@ -359,7 +353,7 @@
                 <li>Aviral Mathur</li>
                 <li>Akshat Kamboj</li>
                 <li>Avijoy Hazra</li>
-                <li>Prajesh</li>
+                <li>Prajesh Saha</li>
             </ul>
         </div>
     </div>
